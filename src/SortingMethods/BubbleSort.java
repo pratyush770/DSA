@@ -4,7 +4,7 @@ public class BubbleSort
 {
     public static void main(String[] args) {
         int it=0;
-        int nums[] = {6,8,2,5,4,1};
+        int nums[] = {6,8,2,5,4,20};
         System.out.println("Before sorting the elements are : ");
         for(int num:nums)
         {
