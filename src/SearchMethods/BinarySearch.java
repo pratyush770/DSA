@@ -2,7 +2,7 @@ package SearchMethods;
 
 import java.util.Scanner;
 
-public class BinarySearch
+public class BinarySearch  // searches mid element first and then considers left and right swapping and time complexity is O(Log N)
 {
         public static void main(String[] args)
         {

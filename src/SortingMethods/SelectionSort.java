@@ -1,10 +1,12 @@
 package SortingMethods;
 
-public class BubbleSort  // swaps each element inside inner loop and time complexity is O(N2)
+public class SelectionSort  // swaps each element outside inner loop on the basis of minimum or maximum value and time complexity is O(N2)
 {
     public static void main(String[] args) {
-        int it=0;
         int nums[] = {6,8,2,5,4,20};
+        int min = -1;
+        int temp=0;
+        int it=0;
         System.out.println("Before sorting the elements are : ");
         for(int num:nums)
         {
@@ -12,19 +14,18 @@ public class BubbleSort  // swaps each element inside inner loop and time comple
         }
         for(int i=0;i<nums.length;i++)
         {
-
-            int temp=0;
+            min = i;
             it++;
-            for(int j=0;j<nums.length-i-1;j++)
+            for(int j=i+1;j<nums.length;j++)
             {
-
-                if(nums[j]>nums[j+1])
+                if(nums[min]>nums[j])
                 {
-                    temp = nums[j];
-                    nums[j] = nums[j+1];
-                    nums[j+1] = temp;
+                    min = j;
                 }
             }
+            temp = nums[min];
+            nums[min] = nums[i];
+            nums[i] = temp;
             System.out.println();
             System.out.println();
             System.out.println("The " + it + " iteration is as follows :");

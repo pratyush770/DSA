@@ -1,6 +1,6 @@
 package SearchMethods;
 import java.util.*;
-public class LinearSearch
+public class LinearSearch  // searches 1 by 1 element and time complexity is O(N)
 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

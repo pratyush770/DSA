@@ -1,30 +1,27 @@
 package SortingMethods;
 
-public class BubbleSort  // swaps each element inside inner loop and time complexity is O(N2)
+public class InsertionSort   // shifts values and time complexity is O(n^2)
 {
     public static void main(String[] args) {
+        int nums [] = {5,6,1,4,2,10};
+        int i,key=0;
         int it=0;
-        int nums[] = {6,8,2,5,4,20};
         System.out.println("Before sorting the elements are : ");
         for(int num:nums)
         {
             System.out.print(num + " ");
         }
-        for(int i=0;i<nums.length;i++)
+        for(i=1;i< nums.length-1;i++)
         {
-
-            int temp=0;
             it++;
-            for(int j=0;j<nums.length-i-1;j++)
+            key = nums[i];  // the value of i goes to key
+            int j=i-1;  // initially j=0
+            while(j>=0 && nums[j]>key)
             {
-
-                if(nums[j]>nums[j+1])
-                {
-                    temp = nums[j];
-                    nums[j] = nums[j+1];
-                    nums[j+1] = temp;
-                }
+                nums[j+1] = nums[j];  // shifts the previous value to the next value
+                j--; // index keeps reducing
             }
+            nums[j+1] = key;  // assigns the lowest value to the first index
             System.out.println();
             System.out.println();
             System.out.println("The " + it + " iteration is as follows :");
