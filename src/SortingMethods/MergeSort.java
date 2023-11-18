@@ -1,6 +1,6 @@
 package SortingMethods;
 
-public class MergeSort
+public class MergeSort  // sorts on the basis of divide and conquer and requires median and time complexity is O(Nlog(N))
 {
     public static void main(String[] args) {
 
